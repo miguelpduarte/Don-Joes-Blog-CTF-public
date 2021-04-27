@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in</title>
+    <style>
+    form {
+	display: flex;
+	flex-direction: column;
+	max-width: 20em;
+	align-items: last baseline;
+    }
+    div.form-group {
+	margin-bottom: 0.5em;
+	display: flex;
+	align-items: center;
+    }
+    div.form-group > label {
+	margin-right: 0.3em;
+    }
+    div.form-send {
+	align-self: center;
+    }
+    </style>
+</head>
+<body>
+    <h3>Login</h3>
+    <form role="form" action="login" method="POST">
+	{% if msg %}
+	    <p>{{ msg }}</p>
+	{% endif %}
+	<div class="form-group">
+	    <label for="username">Username</label>
+	    <input type="name" name="username" class="form-control" id="username" placeholder="Username">
+	</div>
+	<div class="form-group">
+	    <label for="password">Password</label>
+	    <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+	</div>
+
+	<div class="form-send">
+	  <button type="submit" class="btn btn-large">Sign in</button>
+	</div>
+    </form>
+</body>
+</html>

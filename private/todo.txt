@@ -1,0 +1,19 @@
+- structure: templates, static?
+- index page
+- blog page - ensure LFI and test for passwd -> filter for "flag" in arg name and say "nono"
+- blog posts, check Trello
+
+Pt 2:
+- hash the passwords, store the originals in README.md or something that is not inside the folder that gets uploaded.
+- hidden login page
+- admin page that checks if you're admin and has the flag
+
+Pt 3:
+- Make the zip and serve it
+- Confirm that docker is working
+- Deploy to heroku using docker
+----- above done -----
+
+Pt 4:
+- after checking that everything is working, make the templates prettier
+- Dockerfile and flag.py are different in the source.zip, so we should take care of how those files are when deploying them

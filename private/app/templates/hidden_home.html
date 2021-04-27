@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hidden home of Don Joe!</title>
+    <style>
+    nav > ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 1em 0;
+	display: flex;
+	/* background-color: #2868c7; */
+	border: 1px solid black;
+    }
+
+    nav > ul > li > p {
+	display: inline;
+    }
+
+    nav > ul > li {
+	padding: 0 0.5em;
+	color: black;
+    }
+
+    nav > ul > li.align-end {
+	margin-left: auto;
+    }
+
+    nav > ul > li > a {
+	color: inherit;
+	text-decoration: none;
+    }
+
+    li.borderize-left {
+	content: '';
+	border-left: 1px solid black;
+	padding-left: 0.7em;
+    }
+    </style>
+</head>
+<body>
+    <nav>
+	<ul>
+	    <li><a href="admin">Admin page (admin only)</a></li>
+	    {% if user %}
+	    <li class="borderize-left"><p>Hi {{user["username"]}}!</p></li>
+	    <li class="align-end"><a href="logout">Log out</a></li>
+	    {% else %}
+	    <li class="align-end"><a href="login">Login</a></li>
+	    {% endif %}
+	</ul>
+    </nav>
+
+    <h2>Congrats you have reached my hidden home!</h2>
+    <p>This place is only for the best of the best, like Don Joe!</p>
+    <p>I just hope you didn't get here via bruteforcing... :( </p>
+
+    <p>By the way, this app is <a href="source">open source</a> for those who can get here!</p>
+</body>
+</html>
